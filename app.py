@@ -3,6 +3,7 @@ import sys
 from flask import Flask, render_template, request, send_file, jsonify
 from pydub.utils import mediainfo
 import pandas as pd
+import openpyxl
 
 # Tentukan lokasi ffmpeg.exe dalam bundel PyInstaller
 if getattr(sys, 'frozen', False):  # Jika aplikasi dibundel dengan PyInstaller
@@ -133,4 +134,3 @@ def process_folder():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
